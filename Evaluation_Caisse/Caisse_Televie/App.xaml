@@ -1,0 +1,12 @@
+﻿<Application x:Class="Caisse_Televie.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Caisse_Televie"
+             xmlns:Vm="clr-namespace:Caisse_Televie.ViewModel"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Vm:MainWindowViewModel x:Key="Main"/>
+        <Vm:PanierViewModel x:Key="Panier"/>
+        <Vm:HistoriqueViewModel x:Key="Historique"/>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,30 @@
+﻿<Window x:Class="Caisse_Televie.View.Historique"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm ="clr-namespace:Caisse_Televie.ViewModel"
+        xmlns:local="clr-namespace:Caisse_Televie.View"
+        mc:Ignorable="d"
+        Title="Historique" Height="450" Width="800" DataContext="{StaticResource Historique}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <DataGrid Grid.Column="2" ItemsSource="{Binding ListCommand}" IsReadOnly="True" CanUserReorderColumns="False" CanUserSortColumns="False" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ProductID" Binding="{Binding ProduitId}"/>
+                    <DataGridTextColumn Header="Date" Binding="{Binding Heure}"/>
+                    <DataGridTextColumn Header="Prix" Binding="{Binding PrixGlobal}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        
+    </Grid>
+</Window>
